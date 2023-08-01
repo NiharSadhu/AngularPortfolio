@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { init } from 'aos';
 
 
 @Component({
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'MyPortfolio';
+  ngOnInit() {
+    init();
+  }
 }
